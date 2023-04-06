@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# Water Ant
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+"Water Ant" is not a real organism or plant. It can be imagined as swimming in water or crawling in bushes, and its specific appearance and location depend on one's imagination and creativity.
 
-## Recommended IDE Setup
+## Purple Water Ant
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+At birth, Purple Water Ant's body was a light shade of purple, and its infancy was filled with wonder and exploration. As it grew older, it began to adapt to the Water Ant way of life, learning how to hunt and build homes.
+
+On this challenging journey, Purple Water Ant learned many skills and techniques and worked with other Water Ants to establish a thriving community. It was one of the most important members of the community, often entrusted with leading and planning activities.
+
+As Purple Water Ant grew older, it began to feel the fatigue of its body and weariness of its spirit. It knew its time was limited, but still hoped to make a greater contribution to the community.
+
+In the end, Purple Water Ant left this world quietly, surrounded by family and friends. Its spirit still lives on in the Water Ant community, becoming an eternal part of it.
