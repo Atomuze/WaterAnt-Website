@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <div id="nav">
+    <div class="page" id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/habitats">Habitats</router-link> |
       <router-link to="/food">Food</router-link> |
@@ -11,7 +11,7 @@
 </template>
 
 <style scoped>
-.body {
+/* .body {
   background-color: #fff;
   color: #333;
 }
@@ -22,5 +22,9 @@
   text-align: center;
   background-color: #fff;
   color: #333; 
+} */
+
+.page{
+  align-items: bottom;
 }
 </style>

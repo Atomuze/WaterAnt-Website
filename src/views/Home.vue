@@ -1,42 +1,54 @@
 <template>
   <div class="container">
     <h1 class="title">水苡</h1>
-    <p>「水苡」並不是一種真正的生物或植物，水苡可以被想像成在水中游泳，或者在樹叢中爬行，而具體的出現地點則取決於想像和創意</p>
+    <p>「水苡」並不是一種真正的生物或植物，水苡咳苡被想像成在水中游泳，或者在樹叢中爬行，而具體的出現地點則取決於想像和創意</p>
     <p>下面有許多不同品種的「水苡」</p>
     <div class="card" v-for="(place, index) in places" :key="index">
-        <img :src="place.image" :alt="place.name" />
-        <h2>{{ place.name }}</h2>
-        <button class="btn" @click="$router.push('waterant')">了解更多</button>
-      </div>
+      <img class="card-image" :src="place.image" :alt="place.name" />
+      <h2>{{ place.name }}</h2>
+      <button class="btn" v-on:click="toOtherPage(index)">了解更多</button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: 'Home',
+  methods: {
+    toOtherPage(index){
+      if(index == 0){
+        this.$router.push('waterantgreen')
+      }else if(index == 1){
+        this.$router.push('waterantpurple')
+      }
+      
+    }
+  },
   data() {
     return {
       places: [
         {
-          name: '水苡',
-          image: 'https://picsum.photos/id/237/300/200',
-        },
-        {
           name: '綠水苡',
-          image: 'https://picsum.photos/id/238/300/200',
+          image: '/src/assets/Picture/greenWaterAnt/greenWaterAnt.jpg',
         },
         {
           name: '紫水苡',
-          image: 'https://picsum.photos/id/239/300/200',
-        },
-        {
-          name: '紫水苡',
-          image: 'https://picsum.photos/id/239/300/200',
-        },
+          image: '/src/assets/Picture/purpleWaterAnt/purpleWaterAnt.jpg',
+        }
       ],
     };
-  },
+  }
 };
+
+function click(){
+  console.log("click")
+  // if(index == 0){
+  //   $router.push('waterantgreen')
+  // }else if (index == 1){
+  //   $router.push('waterantpurple')
+  // }
+}
+
 </script>
 
 <style scoped>
@@ -62,8 +74,14 @@ export default {
   background-color: #fff; 
 }
 
+.card-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
 .card {
-  max-width: 600px;
+  max-width: 900px;
   margin: 1rem auto;
   padding: 1rem;
   background-color: #f5f5f5;
