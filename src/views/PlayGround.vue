@@ -1,5 +1,5 @@
 <template>
-  <div class="playground">
+  <div class="habitats">
     <h1>水苡遊玩天地</h1>
     <p>「水苡」取決於想像和創意</p>
 

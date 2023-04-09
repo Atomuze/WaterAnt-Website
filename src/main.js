@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import './style.css'
 import App from './App.vue'
 import Home from './views/Home.vue'
-import Habitats from './views/Habitats.vue'
-import Food from './views/Food.vue'
+import enhance from './views/Enhance.vue'
+import Upgrade from './views/Upgrade.vue'
 import Play_Ground from './views/PlayGround.vue'
 import Water_Ant from './views/WaterAnt.vue'
 import Water_Ant_Green from './views/WaterAntGreen.vue'
@@ -16,15 +16,15 @@ const routes = [
       component: Home
     },
     {
-      path: '/habitats',
-      component: Habitats
+      path: '/enhance',
+      component: enhance
     },
     {
-      path: '/food',
-      component: Food
+      path: '/upgrade',
+      component: Upgrade
     },
     {
-      path: '/PlayGround',
+      path: '/playGround',
       component: Play_Ground
     },
     {

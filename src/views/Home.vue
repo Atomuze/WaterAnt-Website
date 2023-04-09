@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="title">水苡</h1>
-    <p>「水苡」並不是一種真正的生物或植物，水苡咳苡被想像成在水中游泳，或者在樹叢中爬行，而具體的出現地點則取決於想像和創意</p>
+    <h2>「水苡」並不是一種真正的生物或植物，水苡咳苡被想像成在水中游泳，或者在樹叢中爬行，而具體的出現地點則取決於想像和創意</h2>
     <p>下面有許多不同品種的「水苡」</p>
     <div class="card" v-for="(place, index) in places" :key="index">
       <img class="card-image" :src="place.image" :alt="place.name" />
