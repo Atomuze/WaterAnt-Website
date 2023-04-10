@@ -1,26 +1,46 @@
 <template>
-  <div class="food">
-    <h1>水苡的食物</h1>
-    <p>水苡是一種"超"雜食性的動物，他會吃任何的東西，包含：</p>
-    <ul>
-      <li>小昆蟲</li>
-      <li>花蜜</li>
-      <li>植物汁液</li>
-      <li>水藻類</li>
-      <li>桌子</li>
-    </ul>
-  </div> 
+  <div>
+    <div>
+      <span>血量：{{ charactor.health }}</span>
+      <button @click="upgrade('health')">升級</button>
+    </div>
+    <div>
+      <span>攻擊力：{{ charactor.attack }}</span>
+      <button @click="upgrade('attack')">升級</button>
+    </div>
+    <div>
+      <span>防禦力：{{ charactor.defense }}</span>
+      <button @click="upgrade('defense')">升級</button>
+    </div>
+  </div>
 </template>
 
+<script setup>
+import { reactive, ref } from "vue";
+
+const charactor = reactive({
+  health: 100,
+  attack: 5,
+  defense: 3,
+});
+
+const upgrade = (stat) => {
+  switch (stat) {
+    case "health":
+      charactor.health += 5;
+      break;
+    case "attack":
+      charactor.attack += 2;
+      break;
+    case "defense":
+      charactor.defense += 1;
+      break;
+    default:
+      break;
+  }
+};
+</script>
 
 <style scoped>
-
-
-
-li {
-  text-align: left;
-  flex: 1;
-}
-
-
+/* 可自訂樣式 */
 </style>

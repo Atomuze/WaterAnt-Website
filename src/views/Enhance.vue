@@ -1,14 +1,16 @@
 <template>
   <div>
-    <img src="/src/assets/logo.png" @click="showHearts"/>
+    <img src="/src/assets/logo.png" @click="showHearts" />
     <div v-if="show" class="hearts-container">
-      <span v-for="(heart, index) in hearts" :key="index" class="heart">{{ heart }}</span>
+      <span v-for="(heart, index) in hearts" :key="index" class="heart">{{
+        heart
+      }}</span>
     </div>
   </div>
 </template>
 
 <script>
-import { reactive, onMounted } from 'vue';
+import { reactive, onMounted } from "vue";
 
 export default {
   setup() {
@@ -27,14 +29,14 @@ export default {
     }
 
     function createHearts() {
-      const container = document.querySelector('.hearts-container');
-      const heart = '❤️';
+      const container = document.querySelector(".hearts-container");
+      const heart = "❤️";
       const hearts = [];
 
       for (let i = 0; i < 50; i++) {
         const x = Math.floor(Math.random() * window.innerWidth);
         const y = Math.floor(Math.random() * window.innerHeight);
-        const heartElement = document.createElement('span');
+        const heartElement = document.createElement("span");
         heartElement.innerText = heart;
         heartElement.style.left = `${x}px`;
         heartElement.style.top = `${y}px`;

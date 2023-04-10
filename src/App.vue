@@ -6,6 +6,7 @@
       </div>
     </router-link>
     <nav class="nav-items">
+      <router-link to="/drawcard" class="nav-item">抽卡</router-link> 
       <router-link to="/enhance" class="nav-item">強化</router-link> 
       <router-link to="/upgrade" class="nav-item">升級</router-link> 
       <router-link to="/playground" class="nav-item">遊玩</router-link> 
@@ -15,9 +16,9 @@
 </template>
 
 <script>
-export default {
-  name: 'Toolbar',
-};
+// export default {
+//   name: 'Toolbar',
+// };
 </script>
 
 <style scoped>
@@ -32,7 +33,7 @@ export default {
   align-items: center;
   padding: 0 1rem;
   background-color: #C7B2DE;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
 }
 
 .logo-wrapper {

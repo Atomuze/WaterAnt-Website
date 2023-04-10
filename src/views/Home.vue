@@ -39,16 +39,6 @@ export default {
     };
   }
 };
-
-function click(){
-  console.log("click")
-  // if(index == 0){
-  //   $router.push('waterantgreen')
-  // }else if (index == 1){
-  //   $router.push('waterantpurple')
-  // }
-}
-
 </script>
 
 <style scoped>
