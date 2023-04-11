@@ -7,7 +7,6 @@ import enhance from './views/Enhance.vue'
 import Upgrade from './views/Upgrade.vue'
 import DrawCard from './views/DrawCard.vue'
 import Play_Ground from './views/PlayGround.vue'
-import Water_Ant from './views/WaterAnt.vue'
 import Water_Ant_Green from './views/WaterAntGreen.vue'
 import Water_Ant_Purple from './views/WaterAntPurple.vue'
 
@@ -31,10 +30,6 @@ const routes = [
   {
     path: '/playGround',
     component: Play_Ground
-  },
-  {
-    path: '/waterant',
-    component: Water_Ant
   },
   {
     path: '/waterantgreen',

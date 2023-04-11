@@ -99,7 +99,7 @@ export default {
   color: #fff;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s;
   margin-left: 1rem;
