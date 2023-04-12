@@ -1,4 +1,5 @@
 <template>
+  <!-- <Charactor ref="charactor" /> -->
   <h1>水苡遊玩天地</h1>
   <div class="upgrade">
     <h2>升級你的專屬水苡</h2>
@@ -19,7 +20,7 @@
     <h2>用你的專屬水苡打敗敵人吧</h2>
     <div class="players">
       <div class="player">
-        <h2>A</h2>
+        <h3>你的水苡</h3>
         <div class="player-info">
           <p>Health: {{ a.health }}</p>
           <p>Attack: {{ a.attack }}</p>
@@ -32,8 +33,11 @@
           </div>
         </div>
       </div>
+      <div>
+        <img class="attack-image" src="src\assets\Picture\attack.png" />
+      </div>
       <div class="player">
-        <h2>B</h2>
+        <h3>敵人</h3>
         <div class="player-info">
           <img
             class="card-image"
@@ -53,8 +57,9 @@
 </template>
 
 <script setup>
-import { reactive, computed } from "vue";
-
+import { ref, reactive, computed } from "vue";
+// import Charactor from "../Charactor.vue";
+// const charactor = ref(null);
 const a = reactive({
   maxHealth: 100,
   health: 100,
@@ -70,20 +75,24 @@ const b = reactive({
 });
 
 const attack = () => {
+  // const { a, b } = charactor.value;
   b.health = b.health - (a.attack - b.defense);
   a.health = a.health - (b.attack - a.defense);
   if (b.health < 0) b.health = 0;
 };
 
 const enemyHealthPercentage = computed(() => {
+  // const { b } = charactor.value;
   return `${(b.health / b.maxHealth) * 100}%`;
 });
 
 const playerHealthPercentage = computed(() => {
+  // const { a } = charactor.value;
   return `${(a.health / a.maxHealth) * 100}%`;
 });
 
 const upgrade = (stat) => {
+  // const { a } = charactor.value;
   switch (stat) {
     case "health":
       a.health += 5;
@@ -126,6 +135,12 @@ const upgrade = (stat) => {
   margin: 0 10px;
 }
 
+.attack-image {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  margin-top: 100px;
+}
 .player-info {
   border: 1px solid #ccc;
   border-radius: 5px;

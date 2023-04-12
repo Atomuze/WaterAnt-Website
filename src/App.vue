@@ -6,9 +6,9 @@
       </div>
     </router-link>
     <nav class="nav-items">
+      <!-- <router-link to="/enhance" class="nav-item">強化</router-link> 
+      <router-link to="/upgrade" class="nav-item">升級</router-link>  -->
       <router-link to="/drawcard" class="nav-item">抽卡</router-link> 
-      <router-link to="/enhance" class="nav-item">強化</router-link> 
-      <router-link to="/upgrade" class="nav-item">升級</router-link> 
       <router-link to="/playground" class="nav-item">遊玩</router-link> 
     </nav>
   </div>
