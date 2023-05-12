@@ -1,20 +1,8 @@
 <template>
-  <!-- <Charactor ref="charactor" /> -->
+  <Charactor v-bind="charactor" />
   <h1>水苡遊玩天地</h1>
   <div class="upgrade">
-    <h2>升級你的專屬水苡</h2>
-    <div class="stat">
-      <span>血量：{{ a.health }}</span>
-      <button class="btn" @click="upgrade('health')">升級</button>
-    </div>
-    <div class="stat">
-      <span>攻擊力：{{ a.attack }}</span>
-      <button class="btn" @click="upgrade('attack')">升級</button>
-    </div>
-    <div class="stat">
-      <span>防禦力：{{ a.defense }}</span>
-      <button class="btn" @click="upgrade('defense')">升級</button>
-    </div>
+    <Upgrade @upgrade = "upgrade"/>
   </div>
   <div class="playground">
     <h2>用你的專屬水苡打敗敵人吧</h2>
@@ -57,9 +45,11 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from "vue";
-// import Charactor from "../Charactor.vue";
-// const charactor = ref(null);
+import { ref, reactive, computed, defineComponent } from "vue";
+import upgrade from "./Upgrade.vue";
+
+// const a = upgrade.data();
+
 const a = reactive({
   maxHealth: 100,
   health: 100,
@@ -91,22 +81,9 @@ const playerHealthPercentage = computed(() => {
   return `${(a.health / a.maxHealth) * 100}%`;
 });
 
-const upgrade = (stat) => {
-  // const { a } = charactor.value;
-  switch (stat) {
-    case "health":
-      a.health += 5;
-      break;
-    case "attack":
-      a.attack += 2;
-      break;
-    case "defense":
-      a.defense += 1;
-      break;
-    default:
-      break;
-  }
-};
+defineComponent({
+  components: {'Upgrade': upgrade}
+})
 </script>
 
 <style scoped>

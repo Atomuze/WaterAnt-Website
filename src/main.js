@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import './style.css'
 import App from './App.vue'
 import Home from './views/Home.vue'
-import enhance from './views/Enhance.vue'
-import Upgrade from './views/Upgrade.vue'
+// import enhance from './views/Enhance.vue'
+// import Upgrade from './views/Upgrade.vue'
 import DrawCard from './views/DrawCard.vue'
 import Play_Ground from './views/PlayGround.vue'
 import Water_Ant_Green from './views/WaterAntGreen.vue'
@@ -15,14 +15,14 @@ const routes = [
     path: '/',
     component: Home
   },
-  {
-    path: '/enhance',
-    component: enhance
-  },
-  {
-    path: '/upgrade',
-    component: Upgrade
-  },
+  // {
+  //   path: '/enhance',
+  //   component: enhance
+  // },
+  // {
+  //   path: '/upgrade',
+  //   component: Upgrade
+  // },
   {
     path: '/drawcard',
     component: DrawCard
